@@ -40,11 +40,13 @@ export default function FooterInitialApp({ createReference }) {
       </div>
 
       <IconLeftTextRight createReference={createReference} onClick={() => navigate("/EPG")}>
+
+        <p>Abrir o guia <br />
+          da TV Aberta</p>
         <BorderedIcon color={"white"}>
           <AiOutlinePicLeft size={76} />
         </BorderedIcon>
 
-        <p>Abrir guia da TV Aberta</p>
       </IconLeftTextRight>
     </Footer>
   );

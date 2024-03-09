@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom"
+
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { LuDownload } from "react-icons/lu";
@@ -7,13 +9,13 @@ import { MdOutlineMonitor } from "react-icons/md";
 
 import { indicacoes } from "../configs/indicacoes";
 import ScaleFocusHover from "./ScaleFocusHover";
-import { Link } from "react-router-dom";
 
 export default function EPGProgram({ index, item, createReference }) {
 
+  const navigate = useNavigate();
 
   return (
-    <Link to={"/InitialApp"} className="flex flex-row justify-center align-center h-[200px] rounded-lg w-full">
+    <div className="flex flex-row justify-center align-center h-[200px] rounded-lg w-full">
       <div className="h-full mx-5 ">
         <ScaleFocusHover
           classNames={"flex items-center justify-center flex-col p-4 rounded-lg"}
@@ -37,7 +39,7 @@ export default function EPGProgram({ index, item, createReference }) {
         {item.map((programa, indexPrograma) => {
           return (
             <ScaleFocusHover
-              key={indexPrograma}
+              onClick={() => navigate("/EPG-InfoDTV")}
               createReference={createReference}
               classNames={"flex p-3 bg-zinc-700 rounded-lg mx-5 flex-1 flex-col items-center justify-between"}
             >
@@ -113,6 +115,6 @@ export default function EPGProgram({ index, item, createReference }) {
       <ScaleFocusHover createReference={createReference} classNames={"flex flex-col items-center justify-center text-white"}>
         <BsChevronRight size={50} />
       </ScaleFocusHover>
-    </Link>
+    </div>
   );
 }

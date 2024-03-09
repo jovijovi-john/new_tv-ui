@@ -121,6 +121,12 @@ export default function GuiaPorEmissora() {
     }
   }
 
+  function handleNavigate(program) {
+    if (!program.blocked) {
+      navigate("/EPG-InfoDTV")
+    }
+  }
+
   // Acionado quando o componente for renderizado pela primeira vez
   useEffect(() => {
     // Focando o primeiro elemento assim que a tela carregar
@@ -157,6 +163,7 @@ export default function GuiaPorEmissora() {
                   canal.programs.map((programa, indexPrograma) => {
                     return (
                       <ScaleFocusHover
+                        onClick={() => handleNavigate(programa)}
                         createReference={createReference}
                         key={indexPrograma}>
 

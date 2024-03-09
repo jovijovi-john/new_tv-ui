@@ -1,9 +1,8 @@
 import React from 'react'
-import RoundedIcon from './RoundedIcon'
 
-export default function RoundedIconWithDescription({ children }) {
+export default function RoundedIconWithDescription({ children, onClick }) {
   return (
-    <div className='flex flex-col items-center justify-center h-full text-xl gap-2 text-white'>
+    <div className='flex flex-col items-center justify-center h-full text-xl gap-2 text-white' onClick={onClick}>
       {children}
     </div>
   )

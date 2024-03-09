@@ -127,7 +127,7 @@ export default function Homepage() {
       {/*Aplicativos*/}
       <div className="flex w-full gap-16">
 
-        <RoundedIconWithDescription>
+        <RoundedIconWithDescription onClick={() => navigate("/apps")}>
           <RoundedIcon bgColor={"bg-violet-600"} createReference={createReference}>
             <TbGridDots size={60} className="text-white" />
           </RoundedIcon>
@@ -158,7 +158,7 @@ export default function Homepage() {
       {/*Emissoras*/}
       <div className="flex w-full gap-16">
 
-        <RoundedIconWithDescription>
+        <RoundedIconWithDescription onClick={() => navigate("/tvAberta")}>
           <RoundedIcon bgColor={"bg-red-700"} createReference={createReference}>
             <MdOutlineMonitor size={60} className="text-white" />
           </RoundedIcon>

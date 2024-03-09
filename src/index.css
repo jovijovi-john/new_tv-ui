@@ -17,3 +17,14 @@ body,
   height: 100%;
   width: 100%;
 }
+
+::-webkit-scrollbar {
+  background-color: #222;
+  height: 12px;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 12px;
+}

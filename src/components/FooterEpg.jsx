@@ -15,14 +15,15 @@ export default function FooterEpg({ createReference }) {
   return (
     <Footer classNames={"p-4 justify-between"}>
 
-      <IconLeftTextRight createReference={createReference} onClick={() => navigate("/homepage")}>
+      <IconLeftTextRight createReference={createReference} onClick={() => navigate("/tvAberta")}>
         <BorderedIcon color={"white"}>
           <FaArrowLeft size={76} />
         </BorderedIcon>
 
-        <span className="text-2xl">
-          Voltar aos apps <br /> de TV aberta
-        </span>
+        <p className="text-2xl">
+          Voltar aos apps <br />
+          de TV aberta
+        </p>
       </IconLeftTextRight>
 
       <IconLeftTextRight createReference={createReference} onClick={() => navigate("/GuiaTvAberta")}>

@@ -10,11 +10,14 @@ import EPG from "./pages/EPG/EPG.jsx";
 import EPGInfoDTV from "./pages/EPG-InfoDTV/EPG-InfoDTV.jsx";
 import InitialApp from "./pages/InitialApp/InitialApp.jsx";
 import GuiaPorEmissora from "./pages/GuiaPorEmissora/index.jsx";
-import GuiaPorGenero from "./pages/GuiaPorGenero/index.jsx";
+import GuiaPorGenero from "./pages/GuiaPorCategoria/index.jsx";
 import GuiaRadiodifusor from "./pages/GuiaRadiodifusor/index.jsx";
 import GuiaCategoria from "./pages/GuiaCategoria/index.jsx";
 import Homepage from "./pages/Homepage/index.jsx";
 import Fabricante from "./pages/Fabricante/index.jsx";
+import Recomendacoes from "./pages/Recomendations/index.jsx";
+import TvAberta from "./pages/TvAberta/index.jsx";
+import Apps from "./pages/Aplicativos/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +29,20 @@ const router = createBrowserRouter([
     element: <Fabricante />,
   },
   {
+    path: "/recomendacoes",
+    element: <Recomendacoes />,
+  },
+  {
     path: "/homepage",
     element: <Homepage />,
+  },
+  {
+    path: "/tvAberta",
+    element: <TvAberta />,
+  },
+  {
+    path: "/apps",
+    element: <Apps />,
   },
   {
     path: "/EPG",

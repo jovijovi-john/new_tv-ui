@@ -29,10 +29,13 @@ export default function GuiaCategoria() {
 
   // Acionado quando um elemento do array de referências é focado
   function handleFocus(el) {
-    // Tem que converter pra número, porque o id vem como string
-    // Assim previnirá erros de "8" + 1 == 81
-    focusIndex = Number(el.id);
-    console.log(el);
+    if (el) {
+      // Tem que converter pra número, porque o id vem como string
+      // Assim previnirá erros de "8" + 1 == 81
+      focusIndex = Number(el.id);
+      console.log(el);
+
+    }
   }
 
   // Função utilizada para criar uma referência do elemento
@@ -59,8 +62,8 @@ export default function GuiaCategoria() {
   function handleFocusElement(keyPressed, keysFunctions) {
     if (!keysFunctions) {
       keysFunctions = {
-        ArrowUp: -10,
-        ArrowDown: 10,
+        ArrowUp: -11,
+        ArrowDown: 11,
         ArrowLeft: -1,
         ArrowRight: 1,
       };
@@ -103,6 +106,14 @@ export default function GuiaCategoria() {
     }
   }
 
+
+  function handleNavigate(program) {
+    if (!program.blocked) {
+      navigate("/EPG-InfoDTV")
+    }
+  }
+
+
   // Acionado quando o componente for renderizado pela primeira vez
   useEffect(() => {
     // Focando o primeiro elemento assim que a tela carregar
@@ -130,7 +141,7 @@ export default function GuiaCategoria() {
               generos[0].programs.map((programa, indexPrograma) => {
                 return (
                   <ScaleFocusHover
-                    onClick={() => alert("Flamengo")}
+                    onClick={() => handleNavigate(programa)}
                     createReference={createReference}
                     key={indexPrograma}
                   >

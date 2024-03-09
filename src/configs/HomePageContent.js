@@ -1,4 +1,4 @@
-import TVUfmaIcon from "../assets/emissoras/tv_ufma.jpg"
+import TVUfmaIcon from "../assets/emissoras/tvufma.jpg"
 import SBTIcon from "../assets/emissoras/SBT.png"
 import GloboIcon from "../assets/emissoras/Globo.svg"
 import RedeTVIcon from "../assets/emissoras/redeTV.png"

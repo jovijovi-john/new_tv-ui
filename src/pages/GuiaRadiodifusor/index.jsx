@@ -107,6 +107,12 @@ export default function GuiaRadiodifusor() {
     }
   }
 
+  function handleNavigate(program) {
+    if (!program.blocked) {
+      navigate("/EPG-InfoDTV")
+    }
+  }
+
   // Acionado quando o componente for renderizado pela primeira vez
   useEffect(() => {
     // Focando o primeiro elemento assim que a tela carregar
@@ -141,8 +147,17 @@ export default function GuiaRadiodifusor() {
               <div className='flex gap-5 ml-8'>
                 {
                   genero.programs.map((programa, indexPrograma) => {
-                    return <ScaleFocusHover createReference={createReference} key={indexPrograma}>
-                      <CardProgram key={indexPrograma} blocked={programa.blocked} genero={programa.genre} radiodifusorName={programa.radiodifusor} />
+                    return <ScaleFocusHover
+                      createReference={createReference}
+                      key={indexPrograma}
+                      onClick={() => handleNavigate(programa)}
+                    >
+
+                      <CardProgram
+                        blocked={programa.blocked}
+                        genero={programa.genre}
+                        radiodifusorName={programa.radiodifusor}
+                      />
                     </ScaleFocusHover>
                   })
                 }

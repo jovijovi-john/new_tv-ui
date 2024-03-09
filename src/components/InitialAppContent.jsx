@@ -1,25 +1,21 @@
 import React from "react";
 
-import ChannelInfos from "./ChannelInfos";
 import Rating from "./Rating";
+import VideoPlayer from "./VideoPlayer";
+import CardRadiodifusor from "./CardRadiodifusor";
 
 export default function InitialAppContent({ createReference }) {
   return (
     <main className="bg-zinc-800 w-full flex-1 p-8 rounded-2xl grid grid-cols-[1fr,3fr] gap-4">
-      <ChannelInfos createReference={createReference} />
+      <CardRadiodifusor createReference={createReference} classNames={"justify-center"} />
 
       <div
         className="h-full w-full flex flex-col"
         tabIndex={0}
         createReference={(el) => createReference(el)}
       >
-        <iframe
-          className="flex-1"
-          src="https://www.youtube.com/embed/TSNrP06lCZY?si=ZNsUhIjJe_dpF9Jc?controls=0&autoplay=1&loop=1"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
+
+        <VideoPlayer classNames={"flex-1"} />
 
         <div className="flex gap-4 my-6">
           <div className="text-xl text-white font-medium w-[150px] bg-red-700 px-8 py-[0.25rem] uppercase flex text-center items-center justify-center">
