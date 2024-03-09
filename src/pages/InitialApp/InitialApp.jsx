@@ -24,8 +24,11 @@ export default function InitialApp() {
   function handleFocus(el) {
     // Tem que converter pra número, porque o id vem como string
     // Assim previnirá erros de "8" + 1 == 81
-    focusIndex = Number(el.id);
-    console.log(el);
+
+    if (el) {
+      focusIndex = Number(el.id);
+      console.log(el);
+    }
   }
 
   // Função utilizada para criar uma referência do elemento
@@ -53,7 +56,7 @@ export default function InitialApp() {
     if (!keysFunctions) {
       keysFunctions = {
         ArrowUp: -6,
-        ArrowDown: 6,
+        ArrowDown: 1,
         ArrowLeft: -1,
         ArrowRight: 1,
       };
@@ -62,10 +65,26 @@ export default function InitialApp() {
     if (keysFunctions[keyPressed.code]) {
       keyPressed.preventDefault();
 
-      let newFocus = focusIndex + keysFunctions[keyPressed.code];
+      let newFocus;
+
+      switch (keyPressed.code) {
+        case "ArrowUp":
+          // Se o foco está no footer
+          if (focusIndex >= 2) {
+            newFocus = 1
+          } else {
+            newFocus = 0
+          }
+          break;
+
+        default:
+          newFocus = focusIndex + keysFunctions[keyPressed.code];
+      }
+
 
       if (newFocus < 0) {
         newFocus = 0;
+
       } else if (newFocus >= refs.current.length) {
         newFocus = refs.current.length - 1;
       }

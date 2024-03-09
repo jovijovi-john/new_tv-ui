@@ -34,7 +34,6 @@ export default function GuiaCategoria() {
       // Assim previnirá erros de "8" + 1 == 81
       focusIndex = Number(el.id);
       console.log(el);
-
     }
   }
 
@@ -81,11 +80,9 @@ export default function GuiaCategoria() {
           newFocus = 4
 
           // Se o foco está nas duas primeiras linhas dos radiodifusores
-        } else if (focusIndex <= 26) {
-          newFocus = focusIndex + 10
-          // Se o foco está no footer
         } else {
-          newFocus = refs.current.length - 1
+          newFocus = focusIndex + 11
+          // Se o foco está no footer
         }
 
       }
