@@ -18,8 +18,9 @@ import FooterInfoDTV from "../../components/FooterInfoDTV";
 export default function EPGInfoDTV() {
 
   const location = useLocation();
-  const objeto = location.state // Já ta no ponto de receber o programa dinamicamente
+  const programa = location.state.program // Já ta no ponto de receber o programa dinamicamente
 
+  console.log(programa)
 
   const refs = useRef([]);
   const navigate = useNavigate();
@@ -111,7 +112,7 @@ export default function EPGInfoDTV() {
         <Profile createReference={createReference} />
       </Header>
 
-      <ProgramEPG createReference={createReference} />
+      <ProgramEPG programa={programa} createReference={createReference} />
 
       <FooterInfoDTV createReference={createReference} />
     </Page>

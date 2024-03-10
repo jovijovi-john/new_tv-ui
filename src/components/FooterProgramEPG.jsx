@@ -20,7 +20,7 @@ export default function FooterProgramEPG({ createReference }) {
             <FaRegStar size={76} />
           </BorderedIcon>
 
-          <p>
+          <p className="text-left">
             Adicionar
             <br />
             aos favoritos
@@ -32,7 +32,7 @@ export default function FooterProgramEPG({ createReference }) {
             <FaCirclePlay size={76} />
           </BorderedIcon>
 
-          <p>
+          <p className="text-left">
             Assistir
             <br />
             agora

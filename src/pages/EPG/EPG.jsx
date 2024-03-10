@@ -3,12 +3,15 @@ import EPGProgram from "../../components/EPGProgram";
 
 import { useNavigate } from "react-router-dom";
 
-import programas from "../../configs/contentRadiodifusoresEPG";
 import Page from "../../components/Page";
 import Header from "../../components/Header";
 import Profile from "../../components/Profile";
 import SearchBar from "../../components/SearchBar";
 import FooterEpg from "../../components/FooterEpg";
+
+// import programas from "../../configs/contentRadiodifusoresEPG";
+
+import { emissoras } from "../../configs/emissoras";
 
 // Arquivo contendo o mapeamento das teclas referente às rotas da aplicação
 import keyMapping from "./keyMapping";
@@ -22,6 +25,8 @@ export default function EPG() {
 
   // Variável para rastrear a div com foco
   let focusIndex = 0;
+
+  const emissorasValues = Object.values(emissoras)
 
   // Acionado quando um elemento do array de referências é focado
   function handleFocus(el) {
@@ -95,17 +100,19 @@ export default function EPG() {
         <Profile createReference={createReference} />
       </Header>
 
-      <main className="flex-1 bg-zinc-800 px-4 rounded-lg flex flex-col items-center justify-center gap-8">
-        {programas.map((item, index) => {
-          return (
-            <EPGProgram
-              key={index}
-              index={index}
-              item={item}
-              createReference={createReference}
-            />
-          );
-        })}
+      <main className="flex-1 bg-zinc-800 px-4 rounded-lg w-full overflow-y-scroll h-full">
+        <div className="flex flex-col items-center justify-center gap-8 w-full py-8">
+          {emissorasValues.map((emissora, index) => {
+            return (
+              <EPGProgram
+                key={index}
+                index={index}
+                emissora={emissora}
+                createReference={createReference}
+              />
+            );
+          })}
+        </div>
       </main>
 
       <FooterEpg createReference={createReference} />

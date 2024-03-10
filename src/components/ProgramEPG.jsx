@@ -6,35 +6,37 @@ import Rating from "./Rating";
 import PlaceholderProgram from "../assets/EPG/placeholder_program.svg";
 import FooterProgramEPG from "./FooterProgramEPG";
 
-export default function ProgramEPG({ createReference }) {
+export default function ProgramEPG({ createReference, programa }) {
   return (
     <main className="bg-zinc-800 w-full p-8 rounded-2xl">
       <div className="grid grid-cols-[3fr,2fr]">
         <div className="flex items-start gap-6">
-          <Rating type={"10"} size={16} />
+          <Rating type={programa.rating} />
 
           <div className="text-white">
             <h4 className="text-4xl font-bold">
-              Programa a seguir Radiodifusor 2
+              {programa.title}
             </h4>
 
-            <div className="text-2xl">16:30 - 17:00</div>
+            <div className="text-2xl">{programa.startTime} - {programa.endTime}</div>
 
             <div className="mt-4">
-              <CategoryStripe color={"brown"} title={"Categoria C"} />
+              <CategoryStripe color={"brown"} title={`Genero ${programa.genre}`} />
             </div>
 
             <p className="text-white text-3xl mt-12">
-              Resumo sobre o programa a seguir do Radiodifusor 2, tentando
-              despertar o interesse do telespectador para consumir o conteúdo,
-              ou no horário programado ou imediatamente, se assim o radiodifusor
-              permitir
+              {programa.summary}
             </p>
           </div>
         </div>
 
-        <div className="w-full flex">
-          <img src={PlaceholderProgram} alt="" className="ml-auto" />
+        <div className="w-full flex h-full items-center justify-center overflow-hidden max-h-[400px]">
+
+          <div className="ml-auto h-full w-[600px] rounded-2xl  overflow-hidden">
+
+            {/* <img src={PlaceholderProgram} alt="" className="ml-auto" /> */}
+            <img src={programa.banner} alt="" className="w-full h-full  object-cover" />
+          </div>
         </div>
       </div>
 
