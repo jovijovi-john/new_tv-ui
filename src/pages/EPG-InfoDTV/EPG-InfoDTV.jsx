@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -16,6 +16,11 @@ import BorderedIcon from "../../components/BorderedIcon";
 import FooterInfoDTV from "../../components/FooterInfoDTV";
 
 export default function EPGInfoDTV() {
+
+  const location = useLocation();
+  const objeto = location.state // Já ta no ponto de receber o programa dinamicamente
+
+
   const refs = useRef([]);
   const navigate = useNavigate();
 

@@ -14,6 +14,28 @@ export default function EPGProgram({ index, item, createReference }) {
 
   const navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate("/EPG-InfoDTV", {
+      state: {
+        title: "",
+        summary: "",
+        blocked: "",
+        rating: "",
+        banner: "",
+        startTime: "",
+        endTime: "",
+        downloadable: "",
+        genre: "",
+        availableUntil: "",
+        videoProgram: "",
+        broadcaster: "",
+        isLive: "",
+        isOnAir: "",
+        advice: ""
+      }
+    })
+  }
+
   return (
     <div className="flex flex-row justify-center align-center h-[200px] rounded-lg w-full">
       <div className="h-full mx-5 ">
@@ -39,7 +61,8 @@ export default function EPGProgram({ index, item, createReference }) {
         {item.map((programa, indexPrograma) => {
           return (
             <ScaleFocusHover
-              onClick={() => navigate("/EPG-InfoDTV")}
+              key={indexPrograma}
+              onClick={() => handleClick()}
               createReference={createReference}
               classNames={"flex p-3 bg-zinc-700 rounded-lg mx-5 flex-1 flex-col items-center justify-between"}
             >
