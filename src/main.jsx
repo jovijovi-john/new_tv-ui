@@ -18,6 +18,7 @@ import Fabricante from "./pages/Fabricante/index.jsx";
 import Recomendacoes from "./pages/Recomendations/index.jsx";
 import TvAberta from "./pages/TvAberta/index.jsx";
 import Apps from "./pages/Aplicativos/index.jsx";
+import EPGTimeline from "./pages/EPG-Timeline/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/EPG-InfoDTV",
     element: <EPGInfoDTV />,
+  },
+  {
+    path: "/EPG-Timeline",
+    element: <EPGTimeline />,
   },
   {
     path: "/GuiaTvAberta",

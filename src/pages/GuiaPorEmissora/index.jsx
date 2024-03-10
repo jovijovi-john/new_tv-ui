@@ -145,48 +145,52 @@ export default function GuiaPorEmissora() {
         <Profile createReference={createReference} />
       </Header>
 
-      <main className='flex flex-col justify-center gap-4 w-full bg-zinc-800 flex-1 p-8 rounded-lg'>
+      <main className='flex flex-col justify-center gap-4 w-full bg-zinc-800 flex-1 p-8 rounded-lg overflow-hidden'>
 
-        {canais.map((canal, indexCanal) => {
-          return (
-            <div className='flex gap-4 items-center' key={indexCanal} >
+        <div className=' w-full h-full overflow-scroll'>
+          {canais.map((canal, indexCanal) => {
+            return (
+              <div className='flex gap-4 items-center' key={indexCanal} >
 
-              {/* Radiodifusor */}
-              <ScaleFocusHover createReference={createReference} classNames={"flex flex-col p-4 gap-4 rounded text-white min-w-44 items-center"} onClick={() => navigate("/GuiaRadiodifusor")}>
-                <img src={TvIcon} alt="" />
-                <p className='text-lg'>Radiodifusor {indexCanal + 1}</p>
-              </ScaleFocusHover>
+                {/* Radiodifusor */}
+                <ScaleFocusHover createReference={createReference} classNames={"flex flex-col p-4 gap-4 rounded text-white min-w-44 items-center"} onClick={() => navigate("/GuiaRadiodifusor")}>
+                  <img src={TvIcon} alt="" />
+                  <p className='text-lg'>Radiodifusor {indexCanal + 1}</p>
+                </ScaleFocusHover>
 
-              {/* Programas */}
-              <div className='flex gap-5 ml-8'>
-                {
-                  canal.programs.map((programa, indexPrograma) => {
-                    return (
-                      <ScaleFocusHover
-                        onClick={() => handleNavigate(programa)}
-                        createReference={createReference}
-                        key={indexPrograma}>
-
-                        <CardProgram
+                {/* Programas */}
+                <div className='flex gap-5 ml-8 overflow-hidden'>
+                  {
+                    canal.programs.map((programa, indexPrograma) => {
+                      return (
+                        <ScaleFocusHover
+                          onClick={() => handleNavigate(programa)}
+                          createReference={createReference}
                           key={indexPrograma}
-                          blocked={programa.blocked}
-                          genero={programa.genre}
-                        />
-                      </ScaleFocusHover>
-                    )
-                  })
-                }
-              </div>
+                          classNames={"shrink-0"}
+                        >
 
-              {/* ADD icon */}
-              <ScaleFocusHover createReference={createReference} classNames={"flex flex-col text-white  ml-auto w-44 rounded p-4 items-center"}>
-                <IoMdAdd size={72} />
-                <p className='text-md'>Mais streaming <br />
-                  Radiodifusor {indexCanal + 1}</p>
-              </ScaleFocusHover>
-            </div>
-          )
-        })}
+                          <CardProgram
+                            key={indexPrograma}
+                            blocked={programa.blocked}
+                            genero={programa.genre}
+                          />
+                        </ScaleFocusHover>
+                      )
+                    })
+                  }
+                </div>
+
+                {/* ADD icon */}
+                <ScaleFocusHover createReference={createReference} classNames={"flex flex-col text-white  ml-auto w-44 rounded p-4 items-center"}>
+                  <IoMdAdd size={72} />
+                  <p className='text-md'>Mais streaming <br />
+                    Radiodifusor {indexCanal + 1}</p>
+                </ScaleFocusHover>
+              </div>
+            )
+          })}
+        </div>
       </main>
 
       <FooterGuiaPorEmissora createReference={createReference} />

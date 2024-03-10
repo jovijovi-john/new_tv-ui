@@ -1,7 +1,8 @@
-export default function CategoryStripe({ title, color }) {
+export default function CategoryStripe({ title, color, className, textColor }) {
   const colors = {
     brown: "#693300",
     red: "#ff5252",
+    darkRed: "#950000",
     yellow: "#ffd754",
     blue: "#4787ff",
     darkBlue: "#002a77",
@@ -10,15 +11,16 @@ export default function CategoryStripe({ title, color }) {
     pink: "#ff6bb5",
     purple: "#800095",
     darkPurple: "#570064",
-    aquagreen: "#36cc86"
+    aquagreen: "#36cc86",
+    white: "#ffffff"
   };
 
   return (
-    <div
+    <p
       style={{ backgroundColor: colors[color] }}
-      className={`px-3 py-1 max-w-40 text-center rounded-md text-white text-lg`}
+      className={`px-2 py-1 max-w-40  text-center rounded-md ${textColor ?? "text-white"} text-lg flex items-center justify-center  ${className}`}
     >
       {title}
-    </div>
+    </p>
   );
 }

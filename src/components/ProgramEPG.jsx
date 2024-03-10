@@ -40,7 +40,7 @@ export default function ProgramEPG({ createReference, programa }) {
         </div>
       </div>
 
-      <FooterProgramEPG createReference={createReference} />
+      <FooterProgramEPG createReference={createReference} programa={programa} />
     </main>
   );
 }

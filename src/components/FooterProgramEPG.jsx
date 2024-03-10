@@ -9,8 +9,16 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { FaCirclePlay } from "react-icons/fa6";
 
 
-export default function FooterProgramEPG({ createReference }) {
+export default function FooterProgramEPG({ createReference, programa }) {
   const navigate = useNavigate()
+
+  function handleNavigateInfoDTV(programa) {
+    navigate("/InitialApp", {
+      state: {
+        programa: programa
+      }
+    })
+  }
 
   return (
     <div className="flex items-center mt-16">
@@ -27,7 +35,7 @@ export default function FooterProgramEPG({ createReference }) {
           </p>
         </IconLeftTextRight>
 
-        <IconLeftTextRight createReference={createReference}>
+        <IconLeftTextRight createReference={createReference} onClick={() => handleNavigateInfoDTV(programa)}>
           <BorderedIcon color={"#00ce78"}>
             <FaCirclePlay size={76} />
           </BorderedIcon>
