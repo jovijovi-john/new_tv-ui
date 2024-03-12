@@ -19,6 +19,7 @@ import Recomendacoes from "./pages/Recomendations/index.jsx";
 import TvAberta from "./pages/TvAberta/index.jsx";
 import Apps from "./pages/Aplicativos/index.jsx";
 import EPGTimeline from "./pages/EPG-Timeline/index.jsx";
+import ProfileConfig from "./pages/ProfileConfig/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
   {
     path: "/InitialApp",
     element: <InitialApp />,
+  },
+  {
+    path: "/ProfileConfig",
+    element: <ProfileConfig />,
   },
 ]);
 
