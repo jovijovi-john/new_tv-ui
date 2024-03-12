@@ -1,13 +1,17 @@
 import React from 'react'
 
-export default function VideoPlayer({ classNames }) {
+export default function VideoPlayer({ classNames, programa }) {
+
+
   return (
+    programa.video &&
     <iframe
       className={classNames}
-      src="https://www.youtube.com/embed/TSNrP06lCZY?si=ZNsUhIjJe_dpF9Jc?controls=0&autoplay=1&loop=1"
-      title="YouTube video player"
+      src={`${programa.video}/?controls=0&autoplay=1&loop=1`}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen
     ></iframe>
+
+
   )
 }

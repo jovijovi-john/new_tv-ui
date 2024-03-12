@@ -9,13 +9,14 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { FaCirclePlay } from "react-icons/fa6";
 
 
-export default function FooterProgramEPG({ createReference, programa }) {
+export default function FooterProgramEPG({ createReference, programa, emissora }) {
   const navigate = useNavigate()
 
   function handleNavigateInfoDTV(programa) {
     navigate("/InitialApp", {
       state: {
-        programa: programa
+        programa,
+        emissora
       }
     })
   }

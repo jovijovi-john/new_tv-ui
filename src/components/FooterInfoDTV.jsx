@@ -17,7 +17,7 @@ export default function FooterInfoDTV({ createReference }) {
           <FaArrowLeft size={76} />
         </BorderedIcon>
 
-        <p>
+        <p className='text-left'>
           Voltar ao Guia <br />
           da TV aberta
         </p>

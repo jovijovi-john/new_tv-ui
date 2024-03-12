@@ -5,11 +5,13 @@ export default function FocusableElement(
     children,
     classNames,
     onClick = () => { },
-    style = {}
+    style = {},
+    onFocus = () => { }
   }) {
   return (
     <button
       tabIndex={0}
+      onFocus={onFocus}
       ref={(el) => createReference(el)}
       className={`${classNames}`}
       onClick={onClick}

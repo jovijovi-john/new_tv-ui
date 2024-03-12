@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom"
 
@@ -6,8 +6,9 @@ import Page from "../../components/Page";
 import Header from "../../components/Header";
 import Profile from "../../components/Profile";
 import FooterHomepage from "../../components/FooterHomepage";
+import Relateds from "../../components/Relateds.jsx";
 
-import { aplicativos, emissoras } from "../../configs/HomePageContent"
+import { aplicativos } from "../../configs/HomePageContent"
 import RoundedIcon from "../../components/RoundedIcon";
 import ScaleFocusHover from "../../components/ScaleFocusHover";
 
@@ -19,15 +20,19 @@ import { BsChevronRight } from "react-icons/bs";
 import RoundedIconWithDescription from "../../components/RoundedIconWithDescription";
 
 import keyMapping from "./keyMapping"
+import { emissoras } from "../../configs/emissoras";
 
 export default function Homepage() {
 
-  const tv_aberta = Object.values(emissoras);
+  const tv_aberta = Object.values(emissoras).slice(0, 5);
   const apps = Object.values(aplicativos)
-
+  const [elementFocusable, setElementFocusable] = useState();
 
   // Array de refs
   const refs = useRef([]);
+  const refTeste = useRef();
+
+  const refsRelated = useRef([]);
 
   // Utilizado para navegar entre as rotas da aplicação
   const navigate = useNavigate();
@@ -41,18 +46,7 @@ export default function Homepage() {
       // Tem que converter pra número, porque o id vem como string
       // Assim previnirá erros de "8" + 1 == 81
       focusIndex = Number(el.id);
-      console.log(el.id);
-    }
-  }
-
-  // Função utilizada para criar uma referência do elemento
-  function createReference(el) {
-    // Atualmente, ela conta quantos elementos têm no array de refs, e coloca o elemento na ultima posição com o id == len(refs)
-
-    if (el) {
-      el.id = refs.current.length;
-      el.onfocus = () => handleFocus(el);
-      refs.current.push(el);
+      console.log(focusIndex)
     }
   }
 
@@ -100,9 +94,27 @@ export default function Homepage() {
     }
   }
 
-  function handleClick() {
-    navigate("/InitialApp")
+  function handleClickEmissora(emissora) {
+
+    navigate("/InitialApp", {
+      state: {
+        programa: emissora.programs[emissora.initialContent],
+        emissora
+      }
+    })
   }
+
+  // Função utilizada para criar uma referência do elemento
+  function createReference(el) {
+    // Atualmente, ela conta quantos elementos têm no array de refs, e coloca o elemento na ultima posição com o id == len(refs)
+
+    if (el) {
+      el.id = refs.current.length;
+      el.onfocus = () => handleFocus(el);
+      refs.current.push(el);
+    }
+  }
+
 
   // Acionado quando o componente for renderizado pela primeira vez
   useEffect(() => {
@@ -115,6 +127,42 @@ export default function Homepage() {
     window.onkeydown = handleKeyDown;
   }, []);
 
+  const [relacionados, setRelacionados] = useState(["sbt", "globo", "band", "record", "futura"]);
+
+  function createReferenceForRelated(el) {
+    if (el) {
+      el.id = refs.current.length;
+      el.onfocus = () => {
+        handleFocus(el)
+        changeRelated(el)
+      };
+
+      refs.current.push(el);
+      refsRelated.current.push(el);
+    }
+  }
+
+
+  function changeRelated(el) {
+
+    const classNames = refs.current[el.id].className
+
+    const regex = /emissora-\S+/;
+
+    // Usa o método match para encontrar a correspondência
+    const match = classNames.match(regex);
+
+    if (match) {
+      const emissora = match[0].replace("emissora-", "")
+
+      localStorage.setItem("relacionados", emissoras[emissora].related)
+
+    }
+    console.log(refs.current[el.id])
+
+
+  }
+
 
   return <Page>
 
@@ -124,11 +172,11 @@ export default function Homepage() {
 
     <main className="h-full w-full rounded-lg pl-44 flex flex-col justify-around">
 
-      {/*Aplicativos*/}
+      {/* --------------------------------------- APLICATIVOS ---------------------------------------------------- */}
       <div className="flex w-full gap-16">
 
         <RoundedIconWithDescription onClick={() => navigate("/apps")}>
-          <RoundedIcon bgColor={"bg-violet-600"} createReference={createReference}>
+          <RoundedIcon bgColor={"bg-violet-600"} createReference={createReferenceForRelated}>
             <TbGridDots size={60} className="text-white" />
           </RoundedIcon>
 
@@ -140,8 +188,8 @@ export default function Homepage() {
         <div className="flex items-center gap-8">
           {apps.map((app, appIndex) => {
             return <ScaleFocusHover
-              onClick={handleClick}
-              createReference={createReference}
+              onClick={handleClickEmissora}
+              createReference={createReferenceForRelated}
               key={appIndex}
               classNames="flex-1 max-h-[150px] w-full h-full rounded-lg overflow-hidden">
 
@@ -155,7 +203,7 @@ export default function Homepage() {
         </ScaleFocusHover>
       </div>
 
-      {/*Emissoras*/}
+      {/* --------------------------------------- EMISSORAS ---------------------------------------------------- */}
       <div className="flex w-full gap-16">
 
         <RoundedIconWithDescription onClick={() => navigate("/tvAberta")}>
@@ -168,14 +216,16 @@ export default function Homepage() {
 
         <div className="flex items-center gap-8">
           {tv_aberta.map((emissora, emissoraIndex) => {
-            return <ScaleFocusHover
-              onClick={handleClick}
-              createReference={createReference}
-              key={emissoraIndex}
-              classNames="flex-1 max-h-[150px] w-full h-full rounded-lg overflow-hidden">
+            return (
+              <ScaleFocusHover
+                onClick={() => handleClickEmissora(emissora)}
+                createReference={createReferenceForRelated}
+                key={emissoraIndex}
+                classNames={`flex-1 max-h-[150px] w-full h-full rounded-lg overflow-hidden emissora-${emissora.name}`}>
 
-              <img src={emissora.iconEmissora} alt="" className="h-full w-full object-cover" />
-            </ScaleFocusHover>
+                <img src={emissora.icon} alt="" className="h-full w-full object-cover" />
+              </ScaleFocusHover>
+            )
           })}
         </div>
 
@@ -184,34 +234,9 @@ export default function Homepage() {
         </ScaleFocusHover>
       </div>
 
-      {/*Relacionados*/}
-      <div className="flex w-full gap-16">
+      {/* --------------------------------------- RELACIONADOS ---------------------------------------------------- */}
+      <Relateds relacionados={relacionados} createReference={createReferenceForRelated} />
 
-        <RoundedIconWithDescription >
-          <RoundedIcon bgColor={"bg-blue-700"} createReference={createReference}>
-            <BiLike size={60} className="text-white" />
-          </RoundedIcon>
-          <p>Relacionados</p>
-        </RoundedIconWithDescription>
-
-
-        <div className="flex items-center gap-8">
-          {tv_aberta.map((emissora, emissoraIndex) => {
-            return <ScaleFocusHover
-              onClick={handleClick}
-              createReference={createReference}
-              key={emissoraIndex}
-              classNames="flex-1 max-h-[150px] w-full h-full rounded-lg overflow-hidden">
-
-              <img src={emissora.iconEmissora} alt="" className="h-full w-full object-cover" />
-            </ScaleFocusHover>
-          })}
-        </div>
-
-        <ScaleFocusHover createReference={createReference} classNames={"flex flex-col items-center justify-center text-white"}>
-          <BsChevronRight size={70} />
-        </ScaleFocusHover>
-      </div>
     </main>
 
     <FooterHomepage createReference={createReference} />

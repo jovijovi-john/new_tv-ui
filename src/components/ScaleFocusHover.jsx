@@ -7,11 +7,13 @@ export default function ScaleFocusHover(
     createReference,
     classNames,
     onClick = () => { },
-    style = {}
+    style = {},
+    onFocus = () => { }
   }
 ) {
   return (
     <FocusableElement
+      onFocus={onFocus}
       style={style}
       onClick={onClick}
       createReference={createReference}

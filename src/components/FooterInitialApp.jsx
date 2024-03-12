@@ -22,7 +22,7 @@ export default function FooterInitialApp({ createReference }) {
             <BsChevronLeft size={76} />
           </BorderedIcon>
 
-          <p>
+          <p className="text-left">
             Voltar aos apps <br />
             de tv aberta
           </p>
@@ -33,7 +33,7 @@ export default function FooterInitialApp({ createReference }) {
             <FaRegStar size={76} />
           </BorderedIcon>
 
-          <p>
+          <p className="text-left">
             Adicionar <br /> aos favoritos
           </p>
         </IconLeftTextRight>
@@ -41,7 +41,7 @@ export default function FooterInitialApp({ createReference }) {
 
       <IconLeftTextRight createReference={createReference} onClick={() => navigate("/EPG")}>
 
-        <p>Abrir o guia <br />
+        <p className="text-right">Abrir o guia <br />
           da TV Aberta</p>
         <BorderedIcon color={"white"}>
           <AiOutlinePicLeft size={76} />

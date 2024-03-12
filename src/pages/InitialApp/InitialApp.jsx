@@ -1,20 +1,23 @@
-import { useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRef, useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import Profile from "../../components/Profile";
 import InitialAppContent from "../../components/InitialAppContent";
 import Header from "../../components/Header";
 import Page from "../../components/Page";
+import FooterInitialApp from "../../components/FooterInitialApp";
 
 import keyMapping from "./keyMapping";
-import FooterInitialApp from "../../components/FooterInitialApp";
+import { emissoras } from "../../configs/emissoras";
 
 // Array de refs
 
 export default function InitialApp() {
   const refs = useRef([]);
 
-  // Utilizado para navegar entre as rotas da aplicação
+  const [programa, setPrograma] = useState();
+  const [emissora, setEmissora] = useState();
+  const location = useLocation();
   const navigate = useNavigate();
 
   // Variável para rastrear a div com foco
@@ -42,6 +45,7 @@ export default function InitialApp() {
     }
   }
 
+
   // Função para gerenciar eventos do teclado e mapeá-los para a função handleFocusElement
   function handleKeyDown(key) {
     if (!keyMapping[key.code]) {
@@ -50,6 +54,7 @@ export default function InitialApp() {
 
     return navigate(`/${keyMapping[key.code]}`);
   }
+
 
   // Função utilizada para navegação pelo teclado
   function handleFocusElement(keyPressed, keysFunctions) {
@@ -104,13 +109,36 @@ export default function InitialApp() {
     window.onkeydown = handleKeyDown;
   }, []);
 
+  useEffect(() => {
+    if (location.state.programa) {
+      setPrograma(location.state.programa)
+    }
+
+    if (programa) {
+
+      // Caso a emissora não seja informada, vai obter a partir da propriedade "broadcaster" que vem no canal
+      if (!location.state.emissora) {
+        setEmissora(emissoras[programa.broadcaster])
+      } else {
+        setEmissora(location.state.emissora)
+      }
+    }
+
+  }, [programa, emissora])
+
   return (
     <Page>
       <Header>
         <Profile createReference={createReference} />
       </Header>
 
-      <InitialAppContent createReference={createReference} />
+      {(programa && emissora) &&
+
+        <InitialAppContent
+          createReference={createReference}
+          programa={programa}
+          emissora={emissora} />
+      }
 
       <FooterInitialApp createReference={createReference} />
     </Page>
