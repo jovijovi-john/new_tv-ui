@@ -74,7 +74,7 @@ export const emissoras = {
         rating: 14,
         banner: "https://github.com/csalles.png",
         startTime: "15:30",
-        endTime: "16:00",
+        endTime: "17:00",
         downloadable: false,
         genre: "A",
         availableUntil: "28/07/2024",

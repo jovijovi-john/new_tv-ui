@@ -130,7 +130,6 @@ export default function EPGTimeline() {
 
           <div></div>
 
-          <div className="bg-purple-500">Sexo</div>
 
         </div> */}
 

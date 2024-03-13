@@ -4,7 +4,7 @@ import FocusableElement from "./FocusableElement"
 // Componente responsável por aumentar o tamanho do componente filho quando for acionado um evento de focus ou hover sobre ele
 export default function ScaleFocusHover(
   { children,
-    createReference,
+    createReference = () => { },
     classNames,
     onClick = () => { },
     style = {},
