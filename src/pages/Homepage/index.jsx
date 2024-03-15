@@ -8,7 +8,6 @@ import Profile from "../../components/Profile";
 import FooterHomepage from "../../components/FooterHomepage";
 import Relateds from "../../components/Relateds.jsx";
 
-import { aplicativos } from "../../configs/HomePageContent"
 import RoundedIcon from "../../components/RoundedIcon";
 import ScaleFocusHover from "../../components/ScaleFocusHover";
 
@@ -20,12 +19,14 @@ import { BsChevronRight } from "react-icons/bs";
 import RoundedIconWithDescription from "../../components/RoundedIconWithDescription";
 
 import keyMapping from "./keyMapping"
+
 import { emissoras } from "../../configs/emissoras";
+import { apps } from "../../configs/apps.js";
 
 export default function Homepage() {
 
   const tv_aberta = Object.values(emissoras).slice(0, 5);
-  const apps = Object.values(aplicativos)
+  const appsValues = Object.values(apps)
   const [elementFocusable, setElementFocusable] = useState();
 
   // Array de refs
@@ -186,14 +187,14 @@ export default function Homepage() {
         </RoundedIconWithDescription>
 
         <div className="flex items-center gap-8">
-          {apps.map((app, appIndex) => {
+          {appsValues.map((app, appIndex) => {
             return <ScaleFocusHover
               onClick={handleClickEmissora}
               createReference={createReferenceForRelated}
               key={appIndex}
               classNames="flex-1 max-h-[150px] w-full h-full rounded-lg overflow-hidden">
 
-              <img src={app.iconApp} alt="" className="h-full w-full object-cover" />
+              <img src={app.icon} alt="" className="h-full w-full object-cover" />
             </ScaleFocusHover>
           })}
         </div>
