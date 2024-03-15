@@ -1,7 +1,5 @@
 import React from "react";
 
-import { emissoras } from "../configs/emissoras";
-
 export default function CardRadiodifusor({ createReference, classNames, emissora }) {
   return (
     <div

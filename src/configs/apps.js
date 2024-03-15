@@ -10,7 +10,7 @@ export const apps = {
     name: "HBO",
     icon: HBOIcon,
     slogan: "Slogan HBO",
-    initialContent: 3,
+    initialContent: 0,
     programs: [
       {
         title: "Titulo do programa",
@@ -23,7 +23,7 @@ export const apps = {
         downloadable: true,
         genre: "A",
         availableUntil: "28/07/2024",
-        video: "https://www.youtube.com/embed/6jtOBIICfJc?si=WakjsvqLFcty-bWJ",
+        video: "https://www.youtube.com/embed/eNDKWr3Xmjk?si=r0cZNZOAfHsBox3-",
         broadcaster: "hbo",
         isLive: true,
         isOnAir: true,
@@ -39,7 +39,7 @@ export const apps = {
     name: "Hulu",
     icon: HuluIcon,
     slogan: "Slogan HBO",
-    initialContent: 3,
+    initialContent: 0,
     programs: [
       {
         title: "Titulo do programa",
@@ -68,7 +68,7 @@ export const apps = {
     name: "Netflix",
     icon: NetflixIcon,
     slogan: "Slogan HBO",
-    initialContent: 3,
+    initialContent: 0,
     programs: [
       {
         title: "Titulo do programa",
@@ -97,7 +97,7 @@ export const apps = {
     name: "Pluto TV",
     icon: PlutoTvIcon,
     slogan: "Slogan HBO",
-    initialContent: 3,
+    initialContent: 0,
     programs: [
       {
         title: "Titulo do programa",
@@ -126,7 +126,7 @@ export const apps = {
     name: "Prime Video",
     icon: PrimeVideoIcon,
     slogan: "Slogan HBO",
-    initialContent: 3,
+    initialContent: 0,
     programs: [
       {
         title: "Titulo do programa",

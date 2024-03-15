@@ -95,16 +95,6 @@ export default function Homepage() {
     }
   }
 
-  function handleClickEmissora(emissora) {
-
-    navigate("/InitialApp", {
-      state: {
-        programa: emissora.programs[emissora.initialContent],
-        emissora
-      }
-    })
-  }
-
   // Função utilizada para criar uma referência do elemento
   function createReference(el) {
     // Atualmente, ela conta quantos elementos têm no array de refs, e coloca o elemento na ultima posição com o id == len(refs)
@@ -165,6 +155,26 @@ export default function Homepage() {
   }
 
 
+  function handleClickEmissora(emissora,) {
+
+    navigate("/InitialApp", {
+      state: {
+        programa: emissora.programs[emissora.initialContent],
+        emissora
+      }
+    })
+  }
+  function handleClickApp(app) {
+
+
+    navigate("/InitialApp", {
+      state: {
+        programa: app.programs[app.initialContent],
+        emissora: app
+      }
+    })
+  }
+
   return <Page>
 
     <Header title="">
@@ -189,7 +199,7 @@ export default function Homepage() {
         <div className="flex items-center gap-8">
           {appsValues.map((app, appIndex) => {
             return <ScaleFocusHover
-              onClick={handleClickEmissora}
+              onClick={() => handleClickApp(app)}
               createReference={createReferenceForRelated}
               key={appIndex}
               classNames="flex-1 max-h-[150px] w-full h-full rounded-lg overflow-hidden">
