@@ -9,6 +9,7 @@ import AudioDescButton from '../../components/AudioDescButton'
 import LibrasButton from '../../components/LibrasButton'
 
 import keyMapping from "./keyMapping"
+import ScaleFocusHover from '../../components/ScaleFocusHover'
 
 export default function SelectLanguage() {
 
@@ -40,7 +41,9 @@ export default function SelectLanguage() {
     if (el) {
       el.id = refs.current.length;
       el.onfocus = () => handleFocus(el);
-      refs.current.push(el);
+      refs.current.push(el)
+
+
     }
   }
 
@@ -136,9 +139,13 @@ export default function SelectLanguage() {
         <LibrasButton createReference={createReference} />
 
 
-        <button ref={(el) => createReference(el)} type='btn' className='bg-emerald-600 ml-auto px-8 text-3xl rounded-xl h-20 font-semibold text-white'>
+        <ScaleFocusHover
+          createReference={createReference}
+          type='btn'
+          classNames='bg-emerald-600 ml-auto px-8 text-3xl rounded-xl h-20 font-semibold text-white'
+        >
           Avançar
-        </button>
+        </ScaleFocusHover>
       </Footer>
     </Page >
   )
