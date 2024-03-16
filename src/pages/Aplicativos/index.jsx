@@ -12,7 +12,7 @@ import RadiodifusorCard from "../../components/RadiodifusorCard.jsx"
 
 import keyMapping from '../TvAberta/keyMapping.js'
 
-import { emissoras } from "../../configs/emissoras.js"
+import { apps } from "../../configs/apps.js"
 
 export default function Apps() {
 
@@ -28,6 +28,8 @@ export default function Apps() {
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
   ].slice(0, 15, 20)
+
+  const appsValues = Object.values(apps);
 
   // Array de refs
   const refs = useRef([]);
@@ -103,6 +105,15 @@ export default function Apps() {
     window.onkeydown = handleKeyDown;
   }, []);
 
+  function handleClickApp(app) {
+    navigate("/InitialApp", {
+      state: {
+        programa: app.programs[app.initialContent],
+        emissora: app
+      }
+    })
+  }
+
   return (
     <Page>
       <Header title='Seus aplicativos de Tv Aberta'>
@@ -111,13 +122,14 @@ export default function Apps() {
         <Profile createReference={createReference} />
       </Header>
 
-      <div className='flex flex-wrap gap-8 justify-center items-center  flex-1'>
-        {array.map((radiodifusor, radiodifusorIndex) => {
+      <div className='flex flex-wrap gap-8 justify-center  flex-1'>
+        {appsValues.map((app, appIndex) => {
           return (
             <RadiodifusorCard
+              onClick={() => handleClickApp(app)}
               createReference={createReference}
-              key={radiodifusorIndex}
-              icon={"https://github.com/jovijovi-john.png"}
+              key={appIndex}
+              icon={app.icon}
               classNames={"w-[300px] h-[150px]"}
             />
           )

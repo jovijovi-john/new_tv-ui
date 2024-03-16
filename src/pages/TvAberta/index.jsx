@@ -91,6 +91,15 @@ export default function TvAberta() {
     window.onkeydown = handleKeyDown;
   }, []);
 
+  function handleClickEmissora(emissora,) {
+
+    navigate("/InitialApp", {
+      state: {
+        programa: emissora.programs[emissora.initialContent],
+        emissora
+      }
+    })
+  }
 
   return (
     <Page>
@@ -104,6 +113,7 @@ export default function TvAberta() {
         {emissorasValues.map((radiodifusor, radiodifusorIndex) => {
           return <RadiodifusorCard
             createReference={createReference}
+            onClick={() => handleClickEmissora(radiodifusor)}
             key={radiodifusorIndex}
             classNames={"w-[300px] h-[150px]"}
             icon={radiodifusor.icon}
