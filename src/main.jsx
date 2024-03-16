@@ -20,6 +20,7 @@ import TvAberta from "./pages/TvAberta/index.jsx";
 import Apps from "./pages/Aplicativos/index.jsx";
 import EPGTimeline from "./pages/EPG-Timeline/index.jsx";
 import ProfileConfig from "./pages/ProfileConfig/index.jsx";
+import SelectLanguage from "./pages/SelectLanguage/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
   {
     path: "/ProfileConfig",
     element: <ProfileConfig />,
+  },
+  {
+    path: "/SelectLanguage",
+    element: <SelectLanguage />,
   },
 ]);
 
