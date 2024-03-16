@@ -16,19 +16,6 @@ import { apps } from "../../configs/apps.js"
 
 export default function Apps() {
 
-  const array = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-  ].slice(0, 15, 20)
-
   const appsValues = Object.values(apps);
 
   // Array de refs
@@ -42,10 +29,13 @@ export default function Apps() {
 
   // Acionado quando um elemento do array de referências é focado
   function handleFocus(el) {
-    // Tem que converter pra número, porque o id vem como string
-    // Assim previnirá erros de "8" + 1 == 81
-    focusIndex = Number(el.id);
-    console.log(el);
+
+    if (el) {
+      // Tem que converter pra número, porque o id vem como string
+      // Assim previnirá erros de "8" + 1 == 81
+      focusIndex = Number(el.id);
+      console.log(el);
+    }
   }
 
   // Função utilizada para criar uma referência do elemento
@@ -103,6 +93,9 @@ export default function Apps() {
 
     // Adicionando o listener do teclado
     window.onkeydown = handleKeyDown;
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   function handleClickApp(app) {

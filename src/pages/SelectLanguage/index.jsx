@@ -140,6 +140,7 @@ export default function SelectLanguage() {
 
 
         <ScaleFocusHover
+          onClick={() => navigate("/ProfileConfig")}
           createReference={createReference}
           type='btn'
           classNames='bg-emerald-600 ml-auto px-8 text-3xl rounded-xl h-20 font-semibold text-white'

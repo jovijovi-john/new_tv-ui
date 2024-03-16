@@ -21,6 +21,7 @@ import Apps from "./pages/Aplicativos/index.jsx";
 import EPGTimeline from "./pages/EPG-Timeline/index.jsx";
 import ProfileConfig from "./pages/ProfileConfig/index.jsx";
 import SelectLanguage from "./pages/SelectLanguage/index.jsx";
+import DiscoverChannels from "./pages/DiscoverChannels/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -86,6 +87,10 @@ const router = createBrowserRouter([
   {
     path: "/SelectLanguage",
     element: <SelectLanguage />,
+  },
+  {
+    path: "/DiscoverChannels",
+    element: <DiscoverChannels />,
   },
 ]);
 
