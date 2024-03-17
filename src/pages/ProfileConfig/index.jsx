@@ -99,7 +99,7 @@ export default function ProfileConfig() {
       <Header title='Configuração de Perfil' className={"border-b-2 border-b-zinc-700"}></Header>
 
       <main className='flex-1 bg-zinc-900 flex items-center justify-center  w-full gap-6'>
-        <ProfileCardBox createReference={createReference}>
+        <ProfileCardBox createReference={createReference} onClick={() => navigate("/DiscoverChannels")}>
           <div className='rounded-full overflow-hidden'>
             <FaUserCircle className='bg-zinc-100 text-blue-900 w-full h-full object-cover' alt="" size={160} />
           </div>

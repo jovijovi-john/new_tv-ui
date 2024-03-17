@@ -12,16 +12,18 @@ import { emissoras } from "../../configs/emissoras";
 
 // Array de refs
 
+let focusIndex = 0; // tem que ficar aqui do lado de fora porque senão a cada atualização do componente ele atribuirá 0 de novo
+
 export default function InitialApp() {
   const refs = useRef([]);
 
   const [programa, setPrograma] = useState();
   const [emissora, setEmissora] = useState();
+
   const location = useLocation();
   const navigate = useNavigate();
 
   // Variável para rastrear a div com foco
-  let focusIndex = 0;
 
   // Acionado quando um elemento do array de referências é focado
   function handleFocus(el) {
@@ -30,7 +32,6 @@ export default function InitialApp() {
 
     if (el) {
       focusIndex = Number(el.id);
-      console.log(el);
     }
   }
 
@@ -39,9 +40,12 @@ export default function InitialApp() {
     // Atualmente, ela conta quantos elementos têm no array de refs, e coloca o elemento na ultima posição com o id == len(refs)
 
     if (el) {
-      el.id = refs.current.length;
-      el.onfocus = () => handleFocus(el);
-      refs.current.push(el);
+
+      if (!el.id) {
+        el.id = refs.current.length;
+        el.onfocus = () => handleFocus(el);
+        refs.current.push(el);
+      }
     }
   }
 
@@ -75,21 +79,34 @@ export default function InitialApp() {
       switch (keyPressed.code) {
         case "ArrowUp":
           // Se o foco está no footer
-          if (focusIndex >= 2) {
-            newFocus = 1
+          if (focusIndex >= 3) {
+
+            if (focusIndex != refs.current.length - 1) {
+              newFocus = 1
+            } else {
+              newFocus = 2
+            }
+
           } else {
             newFocus = 0
+          }
+          break;
+        case "ArrowDown":
+          if (focusIndex != 0 && focusIndex <= 2) {
+            newFocus = 3
+          } else {
+            newFocus = focusIndex + 1
           }
           break;
 
         default:
           newFocus = focusIndex + keysFunctions[keyPressed.code];
+          break;
       }
 
 
       if (newFocus < 0) {
         newFocus = 0;
-
       } else if (newFocus >= refs.current.length) {
         newFocus = refs.current.length - 1;
       }
@@ -139,8 +156,9 @@ export default function InitialApp() {
           programa={programa}
           emissora={emissora} />
       }
-
-      <FooterInitialApp createReference={createReference} />
+      {(programa && emissora) &&
+        <FooterInitialApp createReference={createReference} />
+      }
     </Page>
   );
 }

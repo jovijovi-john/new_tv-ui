@@ -15,7 +15,7 @@ export default function InitialAppContent({ createReference, programa, emissora 
       <div
         className="h-full w-full flex flex-col"
         tabIndex={0}
-        createReference={(el) => createReference(el)}
+        ref={(el) => createReference(el)}
       >
 
         <VideoPlayer programa={programa} classNames={"flex-1"} />

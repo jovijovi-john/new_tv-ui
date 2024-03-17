@@ -1,10 +1,11 @@
 import React from 'react'
 import ScaleFocusHover from './ScaleFocusHover'
 
-export default function ProfileCardBox({ createReference, children }) {
+export default function ProfileCardBox({ createReference, children, onClick = () => { } }) {
   return (
     <ScaleFocusHover
       createReference={createReference}
+      onClick={onClick}
       classNames={
         `
         border-2 border-zinc-400 

@@ -8,7 +8,7 @@ export default function Fabricante() {
   const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {
-      navigate("/homepage");
+      navigate("/SelectLanguage");
     }, 6000);
   }, []);
 
