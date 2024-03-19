@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
-import Page from "../../components/Page"
-import Header from "../../components/Header"
-import SearchBar from "../../components/SearchBar"
-import Profile from "../../components/Profile"
+import Page from "../../components/Page.jsx"
+import Header from "../../components/Header.jsx"
+import SearchBar from "../../components/SearchBar.jsx"
+import Profile from "../../components/Profile.jsx"
 import ContentRecomendations from "../../components/ContentRecomendations.jsx"
 import RecomendationsBar from "../../components/RecomendationsBar.jsx"
 
@@ -13,7 +13,7 @@ import { emissoras } from '../../configs/emissoras.js'
 import keyMapping from './keyMapping.js'
 
 
-export default function Recomendacoes() {
+export default function Related() {
 
   // Array de refs
   const refs = useRef([]);
@@ -48,8 +48,12 @@ export default function Recomendacoes() {
     if (!keyMapping[key.code]) {
       return handleFocusElement(key);
     }
-
-    return navigate(`/${keyMapping[key.code]}`);
+    return navigate(`/${keyMapping[key.code]}`, {
+      state: {
+        emissora: location.state.emissora,
+        programa: location.state.programa
+      }
+    });
   }
 
   // Função utilizada para navegação pelo teclado
@@ -115,7 +119,16 @@ export default function Recomendacoes() {
     window.onkeydown = handleKeyDown;
   }, []);
 
-  const emissora = emissoras.futura
+  const location = useLocation();
+
+  console.log(location.state)
+  const emissora = location.state.emissora
+  const programa = location.state.programa
+
+  const recomendations = emissora.related.map((indexProgram, index) => {
+    return emissora.programs[indexProgram]
+  })
+
 
   return (
     <Page >
@@ -124,9 +137,10 @@ export default function Recomendacoes() {
         <Profile createReference={createReference} />
       </Header>
 
-      <ContentRecomendations createReference={createReference} />
+      <ContentRecomendations emissora={emissora} createReference={createReference} programa={programa} />
 
-      <RecomendationsBar recomendations={emissora.related} createReference={createReference} />
+      <RecomendationsBar recomendations={recomendations} createReference={createReference} />
+
     </Page>
   )
 }

@@ -15,7 +15,7 @@ import GuiaRadiodifusor from "./pages/GuiaRadiodifusor/index.jsx";
 import GuiaCategoria from "./pages/GuiaCategoria/index.jsx";
 import Homepage from "./pages/Homepage/index.jsx";
 import Fabricante from "./pages/Fabricante/index.jsx";
-import Recomendacoes from "./pages/Recomendations/index.jsx";
+import Related from "./pages/Related/index.jsx";
 import TvAberta from "./pages/TvAberta/index.jsx";
 import Apps from "./pages/Aplicativos/index.jsx";
 import EPGTimeline from "./pages/EPG-Timeline/index.jsx";
@@ -33,8 +33,8 @@ const router = createBrowserRouter([
     element: <Fabricante />,
   },
   {
-    path: "/recomendacoes",
-    element: <Recomendacoes />,
+    path: "/related",
+    element: <Related />,
   },
   {
     path: "/homepage",

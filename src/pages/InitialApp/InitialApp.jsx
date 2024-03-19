@@ -10,20 +10,29 @@ import FooterInitialApp from "../../components/FooterInitialApp";
 import keyMapping from "./keyMapping";
 import { emissoras } from "../../configs/emissoras";
 
-// Array de refs
-
+// Variável para rastrear a div com foco
 let focusIndex = 0; // tem que ficar aqui do lado de fora porque senão a cada atualização do componente ele atribuirá 0 de novo
 
 export default function InitialApp() {
-  const refs = useRef([]);
 
-  const [programa, setPrograma] = useState();
-  const [emissora, setEmissora] = useState();
+  // Array de refs
+  const refs = useRef([]);
 
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Variável para rastrear a div com foco
+  let programa = location.state.programa;
+  let emissora = location.state.emissora;
+
+  if (!emissora) {
+    // Se a emissora não for passada (InfoDTV), obtém a emissora a partir do campo broadcaster
+    emissora = emissoras[programa.broadcaster]
+  }
+
+  if (!programa) {
+    // Se o programa não for informado, pega o programa definido em initialContent da emissora
+    programa = emissora.programs[emissora.initialContent]
+  }
 
   // Acionado quando um elemento do array de referências é focado
   function handleFocus(el) {
@@ -49,16 +58,19 @@ export default function InitialApp() {
     }
   }
 
-
   // Função para gerenciar eventos do teclado e mapeá-los para a função handleFocusElement
   function handleKeyDown(key) {
     if (!keyMapping[key.code]) {
       return handleFocusElement(key);
     }
 
-    return navigate(`/${keyMapping[key.code]}`);
+    return navigate(`/${keyMapping[key.code]}`, {
+      state: {
+        emissora: emissora,
+        programa: programa
+      }
+    });
   }
-
 
   // Função utilizada para navegação pelo teclado
   function handleFocusElement(keyPressed, keysFunctions) {
@@ -126,22 +138,6 @@ export default function InitialApp() {
     window.onkeydown = handleKeyDown;
   }, []);
 
-  useEffect(() => {
-    if (location.state.programa) {
-      setPrograma(location.state.programa)
-    }
-
-    if (programa) {
-
-      // Caso a emissora não seja informada, vai obter a partir da propriedade "broadcaster" que vem no canal
-      if (!location.state.emissora) {
-        setEmissora(emissoras[programa.broadcaster])
-      } else {
-        setEmissora(location.state.emissora)
-      }
-    }
-
-  }, [programa, emissora])
 
   return (
     <Page>
@@ -149,16 +145,13 @@ export default function InitialApp() {
         <Profile createReference={createReference} />
       </Header>
 
-      {(programa && emissora) &&
+      <InitialAppContent
+        createReference={createReference}
+        programa={programa}
+        emissora={emissora} />
 
-        <InitialAppContent
-          createReference={createReference}
-          programa={programa}
-          emissora={emissora} />
-      }
-      {(programa && emissora) &&
-        <FooterInitialApp createReference={createReference} />
-      }
+      <FooterInitialApp createReference={createReference} />
+
     </Page>
   );
 }

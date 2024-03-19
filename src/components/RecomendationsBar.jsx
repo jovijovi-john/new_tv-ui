@@ -1,11 +1,7 @@
 import React from 'react'
 import RadiodifusorCard from './RadiodifusorCard'
 
-import GloboIcon from "../assets/emissoras/Globo.svg"
-import { emissoras } from '../configs/emissoras'
-
 export default function RecomendationsBar({ recomendations, createReference }) {
-  console.log(recomendations)
 
   return (
     <div className='overflow-x-scroll w-full '>
@@ -16,7 +12,7 @@ export default function RecomendationsBar({ recomendations, createReference }) {
               classNames={"h-full w-[350px]"}
               createReference={createReference}
               key={index}
-              icon={emissoras[recomendation].icon}
+              icon={recomendation.icon}
             />
           )
         })}

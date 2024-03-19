@@ -42,6 +42,10 @@ import UfrnIcon from '../assets/emissoras/Ufrn.png'
 import UnbIcon from '../assets/emissoras/Unb.png'
 import UnicampIcon from '../assets/emissoras/Unicamp.png'
 
+// PROGRAMAS
+
+import GloboEsporteIcon from "../assets/programs/globo_esporte.png"
+
 export const emissoras = {
 
   band: {
@@ -66,6 +70,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: true,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -83,6 +88,7 @@ export const emissoras = {
         isLive: false,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -101,6 +107,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -119,6 +126,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -136,24 +144,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
-      },
-
-      {
-        title: "Titulo do programa",
-        summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, odit! Alias nam dolorem iure? Natus optio enim fugit nisi corrupti mollitia itaque vel tempora perspiciatis quod, repudiandae qui vero adipisci. Sapiente asperiores quo quaerat ut nihil aut nesciunt quas, dolor assumenda.",
-        blocked: true,
-        rating: 12,
-        banner: "https://github.com/csalles.png",
-        startTime: "14:00",
-        endTime: "16:00",
-        downloadable: true,
-        genre: "A",
-        availableUntil: "28/07/2024",
-        video: "https://www.youtube.com/embed/6jtOBIICfJc?si=WakjsvqLFcty-bWJ",
-        broadcaster: "band",
-        isLive: true,
-        isOnAir: false,
-        advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -172,6 +163,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -190,6 +182,25 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
+      },
+      {
+        title: "Titulo do programa",
+        summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, odit! Alias nam dolorem iure? Natus optio enim fugit nisi corrupti mollitia itaque vel tempora perspiciatis quod, repudiandae qui vero adipisci. Sapiente asperiores quo quaerat ut nihil aut nesciunt quas, dolor assumenda.",
+        blocked: true,
+        rating: 12,
+        banner: "https://github.com/csalles.png",
+        startTime: "14:00",
+        endTime: "16:00",
+        downloadable: true,
+        genre: "A",
+        availableUntil: "28/07/2024",
+        video: "https://www.youtube.com/embed/6jtOBIICfJc?si=WakjsvqLFcty-bWJ",
+        broadcaster: "band",
+        isLive: true,
+        isOnAir: false,
+        advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -207,13 +218,13 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
 
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
-
+    related: [0, 1, 2, 3, 4]
   },
 
   boasnovas: {
@@ -238,6 +249,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: true,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -256,6 +268,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -274,6 +287,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -292,6 +306,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -310,6 +325,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -328,6 +344,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -346,6 +363,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -363,6 +381,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -381,10 +400,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
 
@@ -410,6 +430,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: true,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -428,6 +449,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -446,6 +468,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -464,6 +487,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -482,6 +506,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -500,6 +525,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -518,6 +544,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -535,6 +562,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -553,10 +581,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   cancaonova: {
@@ -581,6 +610,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: true,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -599,6 +629,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -617,6 +648,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -635,6 +667,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -653,6 +686,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -671,6 +705,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -689,6 +724,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -706,6 +742,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -724,10 +761,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   cultura: {
@@ -748,10 +786,11 @@ export const emissoras = {
         genre: "A",
         availableUntil: "28/07/2024",
         video: "https://www.youtube.com/embed/6jtOBIICfJc?si=WakjsvqLFcty-bWJ",
-        broadcaster: "band",
+        broadcaster: "cultura",
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -770,6 +809,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -788,6 +828,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -806,6 +847,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -824,6 +866,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -842,6 +885,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -860,6 +904,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -877,6 +922,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -895,10 +941,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
 
@@ -924,6 +971,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -942,6 +990,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -960,6 +1009,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -978,6 +1028,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -996,6 +1047,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1014,6 +1066,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1032,6 +1085,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -1049,6 +1103,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1067,10 +1122,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", , "band", "band", "band", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   gazeta: {
@@ -1095,6 +1151,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1113,6 +1170,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1131,6 +1189,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1149,6 +1208,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1167,6 +1227,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1185,6 +1246,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1203,6 +1265,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -1220,6 +1283,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1238,10 +1302,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   globo: {
@@ -1266,6 +1331,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1284,6 +1350,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1302,6 +1369,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1320,6 +1388,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1338,6 +1407,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1356,6 +1426,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1374,6 +1445,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -1391,6 +1463,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1409,10 +1482,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
 
@@ -1438,6 +1512,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1456,6 +1531,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1474,6 +1550,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1492,6 +1569,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1510,6 +1588,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1528,6 +1607,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1546,6 +1626,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -1563,6 +1644,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1581,10 +1663,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   record: {
@@ -1609,6 +1692,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1627,6 +1711,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1645,6 +1730,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1663,6 +1749,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1681,6 +1768,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1699,6 +1787,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1717,6 +1806,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -1734,6 +1824,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1752,10 +1843,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
 
@@ -1781,6 +1873,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1799,6 +1892,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1817,6 +1911,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1835,6 +1930,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1853,6 +1949,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1871,6 +1968,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1889,6 +1987,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -1906,6 +2005,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1924,10 +2024,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   redebrasil: {
@@ -1952,6 +2053,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1970,6 +2072,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -1988,6 +2091,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2006,6 +2110,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2024,6 +2129,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2042,6 +2148,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2060,6 +2167,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -2077,6 +2185,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2095,10 +2204,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   redetv: {
@@ -2123,6 +2233,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2141,6 +2252,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2159,6 +2271,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2177,6 +2290,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2195,6 +2309,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2213,6 +2328,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2231,6 +2347,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -2248,6 +2365,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2266,10 +2384,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
 
@@ -2295,6 +2414,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2313,6 +2433,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2331,6 +2452,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2349,6 +2471,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2367,6 +2490,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2385,6 +2509,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2403,6 +2528,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -2420,6 +2546,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2438,10 +2565,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   tvaparecida: {
@@ -2466,6 +2594,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2484,6 +2613,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2502,6 +2632,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2520,6 +2651,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2538,6 +2670,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2556,6 +2689,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2574,6 +2708,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -2591,6 +2726,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2609,10 +2745,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   tvbrasil: {
@@ -2637,6 +2774,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2655,6 +2793,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2673,6 +2812,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2691,6 +2831,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2709,6 +2850,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2727,6 +2869,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2745,6 +2888,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -2762,6 +2906,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2780,10 +2925,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   tvcamara: {
@@ -2808,6 +2954,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2826,6 +2973,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2844,6 +2992,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2862,6 +3011,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2880,6 +3030,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2898,6 +3049,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2916,6 +3068,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -2933,6 +3086,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2951,10 +3105,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   tvcidade: {
@@ -2979,6 +3134,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -2997,6 +3153,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3015,6 +3172,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3033,6 +3191,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3051,6 +3210,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3069,6 +3229,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3087,6 +3248,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -3104,6 +3266,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3122,10 +3285,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
 
@@ -3151,6 +3315,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3169,6 +3334,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3187,6 +3353,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3205,6 +3372,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3223,6 +3391,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3241,6 +3410,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3259,6 +3429,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -3276,6 +3447,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3294,10 +3466,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   tvifma: {
@@ -3322,6 +3495,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3340,6 +3514,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3358,6 +3533,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3376,6 +3552,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3394,6 +3571,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3412,6 +3590,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3430,6 +3609,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -3447,6 +3627,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3465,10 +3646,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   tvnazare: {
@@ -3493,6 +3675,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3511,6 +3694,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3529,6 +3713,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3547,6 +3732,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3565,6 +3751,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3583,6 +3770,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3601,6 +3789,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -3618,6 +3807,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3636,10 +3826,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   tvnovotempo: {
@@ -3664,6 +3855,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3682,6 +3874,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3700,6 +3893,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3718,6 +3912,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3736,6 +3931,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3754,6 +3950,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3772,6 +3969,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -3789,6 +3987,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3807,10 +4006,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   tvp: {
@@ -3835,6 +4035,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3853,6 +4054,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3871,6 +4073,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3889,6 +4092,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3907,6 +4111,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3925,6 +4130,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3943,6 +4149,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -3960,6 +4167,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -3978,10 +4186,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   tvsenado: {
@@ -4006,6 +4215,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4024,6 +4234,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4042,6 +4253,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4060,6 +4272,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4078,6 +4291,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4096,6 +4310,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4114,6 +4329,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -4131,6 +4347,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4149,10 +4366,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   tvufma: {
@@ -4177,6 +4395,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4195,6 +4414,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4213,6 +4433,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4231,6 +4452,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4249,6 +4471,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4267,6 +4490,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4285,6 +4509,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -4302,6 +4527,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4320,10 +4546,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   uece: {
@@ -4348,6 +4575,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4366,6 +4594,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4384,6 +4613,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4402,6 +4632,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4420,6 +4651,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4438,6 +4670,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4456,6 +4689,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -4473,6 +4707,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4491,10 +4726,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
 
@@ -4520,6 +4756,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4538,6 +4775,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4556,6 +4794,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4574,6 +4813,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4592,6 +4832,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4610,6 +4851,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4628,6 +4870,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -4645,6 +4888,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4663,10 +4907,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
 
@@ -4692,6 +4937,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4710,6 +4956,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4728,6 +4975,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4746,6 +4994,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4764,6 +5013,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4782,6 +5032,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4800,6 +5051,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -4817,6 +5069,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4835,10 +5088,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   uff: {
@@ -4863,6 +5117,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4881,6 +5136,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4899,6 +5155,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4917,6 +5174,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4935,6 +5193,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4953,6 +5212,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -4971,6 +5231,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -4988,6 +5249,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5006,10 +5268,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   ufjf: {
@@ -5034,6 +5297,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5052,6 +5316,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5070,6 +5335,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5088,6 +5354,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5106,6 +5373,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5124,6 +5392,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5142,6 +5411,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -5159,6 +5429,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5177,10 +5448,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   ufmg: {
@@ -5205,6 +5477,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5223,6 +5496,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5241,6 +5515,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5259,6 +5534,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5277,6 +5553,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5295,6 +5572,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5313,6 +5591,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -5330,6 +5609,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5348,10 +5628,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   ufpa: {
@@ -5376,6 +5657,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5394,6 +5676,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5412,6 +5695,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5430,6 +5714,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5448,6 +5733,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5466,6 +5752,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5484,6 +5771,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -5501,6 +5789,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5519,10 +5808,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   ufpb: {
@@ -5547,6 +5837,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5565,6 +5856,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5583,6 +5875,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5601,6 +5894,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5619,6 +5913,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5637,6 +5932,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5655,6 +5951,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -5672,6 +5969,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5690,10 +5988,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   ufrj: {
@@ -5718,6 +6017,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5736,6 +6036,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5754,6 +6055,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5772,6 +6074,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5790,6 +6093,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5808,6 +6112,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5826,6 +6131,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -5843,6 +6149,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5861,10 +6168,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   ufrn: {
@@ -5889,6 +6197,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5907,6 +6216,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5925,6 +6235,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5943,6 +6254,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5961,6 +6273,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5979,6 +6292,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -5997,6 +6311,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -6014,6 +6329,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6032,10 +6348,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   unb: {
@@ -6060,6 +6377,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6078,6 +6396,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6096,6 +6415,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6114,6 +6434,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6132,6 +6453,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6150,6 +6472,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6168,6 +6491,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -6185,6 +6509,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6203,10 +6528,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
   unicamp: {
@@ -6231,6 +6557,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6249,6 +6576,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6267,6 +6595,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6285,6 +6614,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6303,6 +6633,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6321,6 +6652,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6339,6 +6671,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
       {
         title: "Titulo do programa",
@@ -6356,6 +6689,7 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
       {
@@ -6374,10 +6708,11 @@ export const emissoras = {
         isLive: true,
         isOnAir: false,
         advice: "Assista agora!",
+        icon: GloboEsporteIcon
       },
 
     ],
-    related: ["tvufma", "gazeta", "globo", "sbt", "band"]
+    related: [0, 1, 2, 3, 4]
 
   },
 };

@@ -20,7 +20,6 @@ export default function EPGInfoDTV() {
   const location = useLocation();
   const programa = location.state.program // Já ta no ponto de receber o programa dinamicamente
 
-  console.log(programa)
 
   const refs = useRef([]);
   const navigate = useNavigate();
@@ -55,7 +54,12 @@ export default function EPGInfoDTV() {
       return handleFocusElement(key);
     }
 
-    return navigate(`/${keyMapping[key.code]}`);
+    return navigate(`/${keyMapping[key.code]}`, {
+      state: {
+        programa,
+        emissora
+      }
+    });
   }
 
   // Função utilizada para navegação pelo teclado

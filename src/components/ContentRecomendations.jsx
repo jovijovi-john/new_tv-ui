@@ -4,13 +4,13 @@ import CardRadiodifusor from "./CardRadiodifusor.jsx"
 import VideoPlayer from "./VideoPlayer.jsx"
 import Rating from './Rating.jsx'
 
-export default function ContentRecomendations({ createReference }) {
+export default function ContentRecomendations({ createReference, emissora, programa }) {
   return (
     <div className='flex w-full flex-1 gap-16 px-8'>
 
-      <CardRadiodifusor createReference={createReference} classNames={"justify-center"} />
+      <CardRadiodifusor createReference={createReference} classNames={"justify-center"} emissora={emissora} />
 
-      <VideoPlayer classNames="flex-1" />
+      <VideoPlayer classNames="flex-1" programa={programa} />
 
       <div className='flex flex-col max-w-[360px] gap-4'>
 

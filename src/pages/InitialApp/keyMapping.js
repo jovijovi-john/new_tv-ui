@@ -1,4 +1,4 @@
 export default {
-  Digit1: "EPG-InfoDTV",
+  Digit1: "Related",
   Digit2: "GuiaTvAberta",
 };
