@@ -20,17 +20,30 @@ import TvAberta from "./pages/TvAberta/index.jsx";
 import Apps from "./pages/Aplicativos/index.jsx";
 import EPGTimeline from "./pages/EPG-Timeline/index.jsx";
 import ProfileConfig from "./pages/ProfileConfig/index.jsx";
+import CreateProfile from "./pages/CreateProfile/index.jsx";
 import SelectLanguage from "./pages/SelectLanguage/index.jsx";
 import DiscoverChannels from "./pages/DiscoverChannels/index.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Fabricante />,
   },
   {
-    path: "/fabricante",
-    element: <Fabricante />,
+    path: "/SelectLanguage",
+    element: <SelectLanguage />,
+  },
+  {
+    path: "/ProfileConfig",
+    element: <ProfileConfig />,
+  },
+  {
+    path: "/CreateProfile",
+    element: <CreateProfile />,
+  },
+  {
+    path: "/DiscoverChannels",
+    element: <DiscoverChannels />,
   },
   {
     path: "/related",
@@ -79,18 +92,6 @@ const router = createBrowserRouter([
   {
     path: "/InitialApp",
     element: <InitialApp />,
-  },
-  {
-    path: "/ProfileConfig",
-    element: <ProfileConfig />,
-  },
-  {
-    path: "/SelectLanguage",
-    element: <SelectLanguage />,
-  },
-  {
-    path: "/DiscoverChannels",
-    element: <DiscoverChannels />,
   },
 ]);
 
