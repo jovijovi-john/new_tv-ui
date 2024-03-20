@@ -107,7 +107,8 @@ export default function ProfileConfig() {
           <p>Continuar sem criar perfil</p>
         </ProfileCardBox>
 
-        <ProfileCardBox createReference={createReference} onClick={() => navigate("/CreateProfile")}>
+        {/* <ProfileCardBox createReference={createReference} onClick={() => navigate("/CreateProfile")}> */}
+        <ProfileCardBox createReference={createReference}>
           <div className='rounded-full overflow-hidden'>
             <FaCirclePlus className='w-full h-full object-cover text-green-500' alt="" size={160} />
           </div>
