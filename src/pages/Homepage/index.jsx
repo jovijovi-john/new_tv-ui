@@ -166,12 +166,14 @@ export default function Homepage() {
   }
 
   function handleClickApp(app) {
-    navigate("/InitialApp", {
-      state: {
-        programa: app.programs[app.initialContent],
-        emissora: app
-      }
-    })
+    // navigate("/InitialApp", {
+    //   state: {
+    //     programa: app.programs[app.initialContent],
+    //     emissora: app
+    //   }
+    // })
+
+    return
   }
 
   return <Page>
