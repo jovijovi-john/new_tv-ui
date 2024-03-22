@@ -20,7 +20,6 @@ export default function CheckboxInput({
       <input
         ref={(el) => createReference(el)}
         type="checkbox"
-        id='teste'
         name='teste'
         value={'teste'}
         checked={isChecked}

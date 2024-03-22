@@ -46,9 +46,12 @@ export default function CreateProfile() {
     // Atualmente, ela conta quantos elementos têm no array de refs, e coloca o elemento na ultima posição com o id == len(refs)
 
     if (el) {
-      el.id = refs.current.length;
-      el.onfocus = () => handleFocus(el);
-      refs.current.push(el);
+
+      if (!el.id) {
+        el.id = refs.current.length;
+        el.onfocus = () => handleFocus(el);
+        refs.current.push(el);
+      }
     }
   }
 
@@ -76,6 +79,65 @@ export default function CreateProfile() {
       keyPressed.preventDefault();
 
       let newFocus = focusIndex + keysFunctions[keyPressed.code];
+
+      switch (keyPressed.code) {
+        case "ArrowUp":
+          if (focusIndex >= 3 && focusIndex <= 9) {
+            newFocus = 2;
+          } else if (focusIndex >= 10 && focusIndex <= 13) {
+            newFocus = 3;
+          } else if (focusIndex == 14) {
+            newFocus = 10
+          } else if (focusIndex >= 15 && focusIndex <= 18) {
+            newFocus = 14
+          } else if (focusIndex == 19) {
+            newFocus = 0
+          } else if (focusIndex == 20) {
+            newFocus = 15
+          } else if (focusIndex == 21) {
+            newFocus = 18
+          } else if (focusIndex == 22) {
+            newFocus = 19
+          } else {
+            newFocus = focusIndex - 1;
+          }
+          break
+
+        case "ArrowDown":
+          console.log("Pra baixo")
+
+          if (focusIndex >= 3 && focusIndex <= 9) {
+            newFocus = 10;
+          } else if (focusIndex >= 10 && focusIndex <= 13) {
+            newFocus = 14;
+          } else if (focusIndex >= 15 && focusIndex <= 17) {
+            newFocus = 20
+          } else if (focusIndex === 18) {
+            newFocus = 21
+          } else if (focusIndex === 19) {
+            newFocus = 22
+          } else {
+            newFocus = focusIndex + 1;
+          }
+
+          break
+        case "ArrowLeft":
+          if (focusIndex === 19) {
+            newFocus = 1;
+          } else {
+            newFocus = focusIndex - 1;
+          }
+          break
+        case "ArrowRight":
+          const objAux = { 1: true, 9: true, 13: true, 14: true, 18: true }
+
+
+          if (objAux[focusIndex]) {
+            newFocus = 19
+          }
+
+          break
+      }
 
       if (newFocus < 0) {
         newFocus = 0;
