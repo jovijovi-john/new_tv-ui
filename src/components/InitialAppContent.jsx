@@ -14,11 +14,9 @@ export default function InitialAppContent({ createReference, programa, emissora 
 
       <div
         className="h-full w-full flex flex-col"
-        tabIndex={0}
-        ref={(el) => createReference(el)}
       >
 
-        <VideoPlayer programa={programa} classNames={"flex-1"} />
+        <VideoPlayer programa={programa} className={"flex-1 max-h-[425px]"} createReference={createReference} />
 
         <div className="flex gap-4 my-6">
           <div className="text-xl text-white font-medium w-[150px] bg-red-700 px-8 py-[0.25rem] uppercase flex text-center items-center justify-center">
