@@ -104,7 +104,6 @@ export default function CreateProfile() {
           break
 
         case "ArrowDown":
-          console.log("Pra baixo")
 
           if (focusIndex >= 3 && focusIndex <= 9) {
             newFocus = 10;
@@ -129,8 +128,13 @@ export default function CreateProfile() {
           }
           break
         case "ArrowRight":
-          const objAux = { 1: true, 9: true, 13: true, 14: true, 18: true }
-
+          const objAux = {
+            1: true,
+            9: true,
+            13: true,
+            14: true,
+            18: true
+          }
 
           if (objAux[focusIndex]) {
             newFocus = 19
