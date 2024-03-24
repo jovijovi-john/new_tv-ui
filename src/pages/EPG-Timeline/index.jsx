@@ -69,15 +69,62 @@ export default function EPGTimeline() {
       };
     }
 
+    const lastElementIndex = refs.current.length - 1
+
     if (keysFunctions[keyPressed.code]) {
       keyPressed.preventDefault();
 
       let newFocus = focusIndex + keysFunctions[keyPressed.code];
 
+      switch (keyPressed.code) {
+        case "ArrowUp":
+
+          // Se o foco está na primeira linha
+          if (focusIndex >= 3 && focusIndex < 10) {
+            newFocus = 0;
+
+          }
+          // Se o foco ta no footer
+          else if (focusIndex > refs.current.length - 3) {
+
+            // Focar o primeiro elemento da ultima linha
+            newFocus = lastElementIndex - 7
+
+          } else {
+            newFocus = focusIndex - 6
+          }
+
+          break
+
+        case "ArrowDown":
+
+          // Se o foco ta no header
+          if (focusIndex < 3) {
+            newFocus = 4;
+
+            // Se o foco está nas primeiras linhas
+          } else if (focusIndex < refs.current.length - 8) {
+            newFocus = focusIndex + 6
+
+            // Se o foco está na ultima linha
+          } else if (focusIndex < refs.current.length - 2) {
+            newFocus = refs.current.length - 2
+
+            // Se o foco ta no footer
+          } else {
+            newFocus = focusIndex + 1
+          }
+
+          break
+
+        default:
+          break
+      }
+
       if (newFocus < 0) {
         newFocus = 0;
       } else if (newFocus >= refs.current.length) {
-        newFocus = refs.current.length - 1;
+        newFocus = lastElementIndex;
       }
 
       refs.current[newFocus].focus();
@@ -142,7 +189,7 @@ export default function EPGTimeline() {
           <div className="flex w-full pl-16">
             {schedules.map((schedule, index) => {
               return (
-                <div className="w-[200px] relative">
+                <div className="w-[200px] relative" key={index}>
                   <div className="relative -left-[9%] text-2xl text-white">{schedule}h</div>
 
                   <div className="flex">
@@ -178,13 +225,12 @@ export default function EPGTimeline() {
                   <div className="flex h-full gap-1 ">
                     {emissora.programs.map((programa, indexPrograma) => {
                       return (
-                        <ProgramDynamicSize programa={programa} createReference={() => { }} onClick={() => { }} />
+                        <ProgramDynamicSize programa={programa} createReference={createReference} onClick={() => { }} />
                       )
                     })}
                   </div>
                 </div>
               })}
-
 
             </div>
           </div>

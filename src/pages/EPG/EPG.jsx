@@ -41,9 +41,11 @@ export default function EPG() {
     // Atualmente, ela conta quantos elementos têm no array de refs, e coloca o elemento na ultima posição com o id == len(refs)
 
     if (el) {
-      el.id = refs.current.length;
-      el.onfocus = () => handleFocus(el);
-      refs.current.push(el);
+      if (!el.id) {
+        el.id = refs.current.length;
+        el.onfocus = () => handleFocus(el);
+        refs.current.push(el);
+      }
     }
   }
 

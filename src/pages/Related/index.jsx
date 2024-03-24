@@ -125,7 +125,7 @@ export default function Related() {
   const emissora = location.state.emissora
   const programa = location.state.programa
 
-  const recomendations = emissora.related.map((indexProgram, index) => {
+  const recomendations = emissora.related.map((indexProgram) => {
     return emissora.programs[indexProgram]
   })
 
