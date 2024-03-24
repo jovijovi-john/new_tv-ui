@@ -15,7 +15,7 @@ export default function VideoPlayer({ className, programa, createReference = () 
             console.error(`Erro ao entrar em tela cheia: ${err.message} (${err.name})`);
           });
         }
-      }, 3000); // 3000 milissegundos = 3 segundos
+      }, 4000); // 4000 milissegundos = 4 segundos
 
       return () => clearTimeout(timer); // Limpa o temporizador quando o componente for desmontado
     }

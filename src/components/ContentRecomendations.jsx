@@ -10,7 +10,7 @@ export default function ContentRecomendations({ createReference, emissora, progr
 
       <CardRadiodifusor createReference={createReference} classNames={"justify-center"} emissora={emissora} />
 
-      <VideoPlayer className="flex-1 max-h-[600px]" createReference={createReference} programa={programa} />
+      <VideoPlayer className="flex-1 max-h-[550px]" createReference={createReference} programa={programa} />
 
       <div className='flex flex-col max-w-[360px] gap-4'>
 
