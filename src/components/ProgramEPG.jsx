@@ -5,6 +5,7 @@ import Rating from "./Rating";
 
 import PlaceholderProgram from "../assets/EPG/placeholder_program.svg";
 import FooterProgramEPG from "./FooterProgramEPG";
+import { generos } from "../configs/generos";
 
 export default function ProgramEPG({ createReference, programa }) {
   return (
@@ -21,7 +22,7 @@ export default function ProgramEPG({ createReference, programa }) {
             <div className="text-2xl">{programa.startTime} - {programa.endTime}</div>
 
             <div className="mt-4">
-              <CategoryStripe color={"brown"} title={`Genero ${programa.genre}`} />
+              <CategoryStripe color={generos[programa.genre]} title={`${programa.genre}`} />
             </div>
 
             <p className="text-white text-3xl mt-12">
